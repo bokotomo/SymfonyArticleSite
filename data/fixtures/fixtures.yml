@@ -1,0 +1,34 @@
+# # Populate this file with data to be loaded by your ORM's *:data-load task.
+# # You can create multiple files in this directory (i.e. 010_users.yml,
+# # 020_articles.yml, etc) which will be loaded in alphabetical order.
+# # 
+# # See documentation for your ORM's *:data-load task for more information.
+# 
+# User:
+#   fabien:
+#     username: fabien
+#     password: changeme
+#     name:     Fabien Potencier
+#     email:    fabien.potencier@symfony-project.com
+#   kris:
+#     username: Kris.Wallsmith
+#     password: changeme
+#     name:     Kris Wallsmith
+#     email:    kris.wallsmith@symfony-project.com
+
+Article:
+  Page1:
+    title:      テスト
+    slug:       page1
+    image_url:  http://xn--vek601hk4gikl47nekera465l.net/wp-content/uploads/2015/07/Fotolia_73046843_Subscription_Monthly_M-1024x682.jpg
+    text:       詳細の説明ののののののの詳細詳ののののののののののののののののののののののののののの
+  Page2:
+    title:      タイトルのタイトルのタイトル
+    slug:       page2
+    image_url:  http://xn--vek601hk4gikl47nekera465l.net/wp-content/uploads/2015/07/Fotolia_73046843_Subscription_Monthly_M-1024x682.jpg
+    text:       詳細の説明ののののののの詳細詳ののののののののののののののののののののののののののの    
+  Page3:
+    title:      タイトタオとるタイトる
+    slug:       page3
+    image_url:  http://xn--vek601hk4gikl47nekera465l.net/wp-content/uploads/2015/07/Fotolia_73046843_Subscription_Monthly_M-1024x682.jpg
+    text:       詳細の説明ののののののの詳細詳ののののののののののののののののののののののののののの
