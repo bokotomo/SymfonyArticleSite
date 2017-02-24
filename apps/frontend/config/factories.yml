@@ -23,10 +23,13 @@ test:
     param:
       delivery_strategy: none
 
-dev:
+#dev:
   mailer:
     param:
-      delivery_strategy: none
+      charset:           'UTF-8'
+      delivery_strategy: realtime
+      transport:
+        class: Swift_SendmailTransport
 
 all:
   routing:
@@ -40,3 +43,11 @@ all:
     param:
       cache_key_use_vary_headers: true
       cache_key_use_host_name:    true
+
+mailer:
+  param:
+    charset:           'UTF-8'
+    delivery_strategy: realtime
+    transport:
+    class: Swift_SendmailTransport
+

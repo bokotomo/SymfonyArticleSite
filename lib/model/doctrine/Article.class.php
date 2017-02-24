@@ -13,7 +13,7 @@
 class Article extends BaseArticle
 {
   public function findTopPagePublishAricles()
-  { 
+  {
     $query = Doctrine_Query::create()
     ->from('Article')
     ->orderBy('rand()')
@@ -23,11 +23,33 @@ class Article extends BaseArticle
   }
 
   public function findPublishAricleById($id)
-  { 
+  {
     $query = Doctrine_Query::create()
     ->from('Article')
     ->where('id = ?', $id);
 
     return $query->execute();
   }
+
+  public function addAriticle($data)
+  {
+    $article = new Article();
+    $article->setTitle($data["title"]);
+    $article->setText($data["text"]);
+    $article->setImageUrl("https://warambil.files.wordpress.com/2011/02/mylistformwithtasks.gif");
+    $article->setCreatedAt(date('Y-m-d H:i:s'));
+    $article->save();
+  }
+
+  public function editArticle($data)
+  {
+    $article = Article::findPublishAricleById($data["id"]);
+    echo "totyuu error";
+    $article->setTitle($data["title"]);
+    $article->setText($data["text"]);
+    $article->setImageUrl("https://warambil.files.wordpress.com/2011/02/mylistformwithtasks.gif");
+    $article->setUpdatedAt(date('Y-m-d H:i:s'));
+    $article->save();
+  } 
+
 }

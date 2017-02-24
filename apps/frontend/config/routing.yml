@@ -1,10 +1,25 @@
-# You can find more information about this file on the symfony website:
+#a You can find more information about this file on the symfony website:
 # http://www.symfony-project.org/reference/1_4/en/10-Routing
 
 # default rules
 homepage:
   url:   /
   param: { module: default, action: index }
+add_page:
+  url:   /article/web/article/add
+  param: { module: Article, action: Add }
+all_page:
+  url:   /article/web/article/all
+  param: { module: Article, action: All }
+contact_page:
+  url:   /article/web/article/contact
+  param: { module: Article, action: Contact }
+detail_page:
+  url:   /article/web/article/detail
+  param: { module: Article, action: Detail }
+edit_page:
+  url:   /article/web/article/edit
+  param: { module: Article, action: Edit }
 
 # generic rules
 # please, remove them by adding more specific rules

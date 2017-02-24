@@ -2,8 +2,8 @@
 <div id="article">
   <div id="article-image" style="background-image: url('<?php echo $page->getImageUrl() ?>');"></div>
   <div id="article-title">
-    <?php echo link_to($page->getTitle(), '/article/web/article/detail', array(
-    'query_string'=> 'id='.$page->getId(),
+    <?php echo link_to($page->getTitle(), 'detail_page', array(
+    'id'=>$page->getId(),
     'slug'=> $page->getSlug()
     )) ?>
   </div>

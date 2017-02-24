@@ -16,5 +16,11 @@
     <?php echo $data->getText() ?>
   </div>
 
+  <div id="article-detail-edit">
+    <?php echo link_to('編集する', 'edit_page', array(
+    'id'=>$data->getId(),
+    'slug'=> $data->getSlug()
+    )) ?>
+  </div>
   <?php endforeach; ?>
 </div>
